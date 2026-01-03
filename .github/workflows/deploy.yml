@@ -36,12 +36,12 @@ jobs:
       - name: AWS Resource에 접근할 수 있게 AWS credentials 설정
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-region: ap-northeast-2
+          aws-region: us-east-1
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: S3에 프로젝트 폴더 업로드하기
-        run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.tar.gz s3://mingyu-server/$GITHUB_SHA.tar.gz
+        run: aws s3 cp --region us-east-1 ./$GITHUB_SHA.tar.gz s3://mingyu-server/$GITHUB_SHA.tar.gz
 
       - name: CodeDeploy를 활용해 EC2에 프로젝트 코드를 배포하라고 명령
         run: aws deploy create-deployment
