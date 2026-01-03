@@ -48,7 +48,7 @@ jobs:
           --application-name mingyu-server
           --deployment-config-name CodeDeployDefault.AllAtOnce
           --deployment-group-name Production
-          --s3-location bucket=instagram-server,bundleType=tgz,key=$GITHUB_SHA.tar.gz
+          --s3-location bucket=mingyu-server,bundleType=tgz,key=$GITHUB_SHA.tar.gz
 
 
 
