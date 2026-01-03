@@ -69,6 +69,7 @@ jobs:
 
 
 
+
 #      - name: S3에 프로젝트 폴더 업로드하기
 #        run: aws s3 cp --region us-east-1 ./$GITHUB_SHA.tar.gz s3://mingyu-server/$GITHUB_SHA.tar.gz
 #
