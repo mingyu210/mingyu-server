@@ -8,6 +8,7 @@ class MingyuServerApplicationTests {
 
 	@Test
 	void contextLoads() {
+		throw new RuntimeException("Fail!");
 	}
 
 }
